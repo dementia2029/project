@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="label_Range" type="id"/>
+    <item name="label_CrossHair" type="id"/>
+    <item name="label_Razn" type="id"/>
+    <item name="label_RaznD" type="id"/>
+    <item name="label_Summ" type="id"/>
+    <item name="label_Weight" type="id"/>
+    <item name="label_WeightD" type="id"/>
+    <item name="label_Over" type="id"/>
+    <item name="label_OverD" type="id"/>
+    <item name="label_UstupT" type="id"/>
+    <item name="label_Ustup" type="id"/>
+    <item name="label_UstupMin" type="id"/>
+    <item name="label_UstupMax" type="id"/>
+    <item name="label_LevelMin" type="id"/>
+    <item name="label_LevelMax" type="id"/>
+    <item name="label_Level" type="id"/>
+    <item name="label_10angle" type="id"/>
+    <item name="label_Interval" type="id"/>
+    <item name="label_IntervalMin" type="id"/>
+    <item name="label_IntervalMax" type="id"/>
+    <item name="label_Summary" type="id"/>
+    <item name="label_SummaryMin" type="id"/>
+    <item name="label_SummaryMax" type="id"/>
+    <item name="label_InAngle" type="id"/>
+    <item name="label_arr18Col" type="id"/>
+</resources>

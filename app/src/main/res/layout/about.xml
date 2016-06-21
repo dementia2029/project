@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"  android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:id="@+id/about_content1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="НАСТАНОВА ЩОДО ВИКОРИСТАННЯ\nпрограми для планшетних ПК на базі Android OS\n„Програма для розрахунку індивідуальних поправок гармат\n(СГ 2С3М, Г Д-30, СГ 2С1, Г 2А65, Г 2А36)”\n"/>
+
+        <TextView
+            android:paddingBottom="10dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/about_content2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Для розрахунку індивідуальних поправок гармати необхідно виконати такі дії:\n
+1. Відкрити програму «Поправки арт.систем».\n
+2. У віконці «Арт. система» обрати тип артилерійської системи, наприклад «2С3М».\n
+3. У віконцях «Дальність» обрати діапазон дальностей стрільби по цілях в метрах, наприклад, від «5000» до «8000».\n
+4. У віконці «Заряд» обрати заряд на якому планується вести вогонь по цілях, наприклад «П» (Повний).\n
+5. У віконці «ΔVо гарм» встановити значення відхилення початкової швидкості снаряда для даної гармати (%), наприклад «-1,9».\n
+6. У віконці «ΔVо осн» встановити значення відхилення початкової швидкості снаряда для основної гармати (%), наприклад «-0,4».\n
+7. У віконці «Δq» встановити значення кількості вагових знаків снаряда, наприклад «-4» (що означає «----»).\n
+8. У віконцях «Кут» встановити значення кутоміра виміряного з панорами даної гармати на панораму основної, наприклад «48», «40» (що означає 48-40).\n
+9.  У віконці «βh»  встановити значення виміряного за допомогою відбивача вертикальний кут від горизонту панорами до напрямку на панораму основної гармати, наприклад «-2», «50» (що означає -2-50).\n
+10. У віконці «До»  (тільки для систем 2С3М, 2С1)* встановити значення дальності, виміряної від даної гармати до основної по мірній базі за допомогою шкали дальностей панорами, наприклад «90» (що означає 90 м).\n
+11. У  графу 5** «На невідповідність кута» таблиці ввести значення поправок на невідповідність кута прицілювання за прицілом і квадрантом, що записані у формулярі гармати, наприклад 1 (що означає +1тис.)\n
+12.  У графу 18 «На відхилення лінії прицілювання» таблиці ввести значення поправок на відхилення лінії прицілювання, що записані у формулярі гармати, наприклад -1 (що означає -0-01)\n
+13. Натиснути кнопку «Розрахувати» (іконка калькулятора).\n
+14. Зчитати у графах таблиці «Сумарна поправка у рівень» та «Сумарна поправка у кутомір» сумарні індивідуальні поправки гармати. Після виконання вищевказаних дій отримуємо такі результати розрахунку поправок:"/>
+
+        <TableLayout
+
+            android:layout_width="match_parent"
+            android:layout_below="@+id/about_content2"
+            android:layout_height="wrap_content"
+            android:background="#000000">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+                </LinearLayout>
+
+                <TableLayout
+                    android:paddingBottom="1dp"
+                    android:paddingLeft="1dp"
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="#000000">
+
+                    <TableRow
+                        android:layout_weight="1"
+                        android:layout_marginTop="1dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF"
+                        android:gravity="center">
+
+
+                        <TextView
+                            android:textStyle="bold"
+                            android:textSize="11sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="Сумарна поправка у рівень"/>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_weight="1"
+                        android:layout_marginTop="1dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="+1-00"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            />
+                        <LinearLayout
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent">
+
+                            <View style="@style/Divider" />
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="0H"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            />
+                        <LinearLayout
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent">
+
+                            <View style="@style/Divider" />
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="-1-00"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_weight="1"
+                        android:layout_marginTop="1dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="23"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            />
+                        <LinearLayout
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent">
+
+                            <View style="@style/Divider" />
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="24"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            />
+                        <LinearLayout
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent">
+
+                            <View style="@style/Divider" />
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="25"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_weight="1"
+                        android:layout_marginTop="1dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="-0,1"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            />
+                        <LinearLayout
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent">
+
+                            <View style="@style/Divider" />
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="-18,2"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            />
+                        <LinearLayout
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent">
+
+                            <View style="@style/Divider" />
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="1"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_weight="1"
+                        android:layout_marginTop="1dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="-0,1"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            />
+                        <LinearLayout
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent">
+
+                            <View style="@style/Divider" />
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="-15,6"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            />
+                        <LinearLayout
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent">
+
+                            <View style="@style/Divider" />
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="0,9"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_weight="1"
+                        android:layout_marginTop="1dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="-0,1"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            />
+                        <LinearLayout
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent">
+
+                            <View style="@style/Divider" />
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="-13"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            />
+                        <LinearLayout
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent">
+
+                            <View style="@style/Divider" />
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="0,7"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            />
+                    </TableRow>
+                    <TableRow
+                        android:layout_weight="1"
+                        android:layout_marginTop="1dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="-0,1"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            />
+                        <LinearLayout
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent">
+
+                            <View style="@style/Divider" />
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="-11,3"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            />
+                        <LinearLayout
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent">
+
+                            <View style="@style/Divider" />
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="0,6"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            />
+                    </TableRow>
+                </TableLayout>
+
+                <LinearLayout
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <View style="@style/Divider" />
+                </LinearLayout>
+
+                <TableLayout
+                    android:paddingBottom="1dp"
+                    android:paddingLeft="1dp"
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="#000000">
+
+                    <TableRow
+                        android:layout_weight="1"
+                        android:layout_marginTop="1dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF"
+                        android:gravity="center">
+
+
+                        <TextView
+                            android:textStyle="bold"
+                            android:textSize="11sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="Сумарна поправка у рівень"/>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_weight="1"
+                        android:layout_marginTop="1dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="+1-00"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            />
+                        <LinearLayout
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent">
+
+                            <View style="@style/Divider" />
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="0H"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            />
+                        <LinearLayout
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent">
+
+                            <View style="@style/Divider" />
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="-1-00"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_weight="1"
+                        android:layout_marginTop="1dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="15"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            />
+                        <LinearLayout
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent">
+
+                            <View style="@style/Divider" />
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="16"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            />
+                        <LinearLayout
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent">
+
+                            <View style="@style/Divider" />
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="17"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_weight="1"
+                        android:layout_marginTop="1dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="0,3"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            />
+                        <LinearLayout
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent">
+
+                            <View style="@style/Divider" />
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="-1,8"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            />
+                        <LinearLayout
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent">
+
+                            <View style="@style/Divider" />
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="-0,2"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_weight="1"
+                        android:layout_marginTop="1dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="0,2"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            />
+                        <LinearLayout
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent">
+
+                            <View style="@style/Divider" />
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="-0,2"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            />
+                        <LinearLayout
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent">
+
+                            <View style="@style/Divider" />
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="-0,1"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_weight="1"
+                        android:layout_marginTop="1dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="0,2"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            />
+                        <LinearLayout
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent">
+
+                            <View style="@style/Divider" />
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="1,6"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            />
+                        <LinearLayout
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent">
+
+                            <View style="@style/Divider" />
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="-0,1"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            />
+                    </TableRow>
+                    <TableRow
+                        android:layout_weight="1"
+                        android:layout_marginTop="1dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="0,3"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            />
+                        <LinearLayout
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent">
+
+                            <View style="@style/Divider" />
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="2,7"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            />
+                        <LinearLayout
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent">
+
+                            <View style="@style/Divider" />
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="-0,2"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            />
+                    </TableRow>
+                </TableLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <View style="@style/Divider" />
+                </LinearLayout>
+
+
+
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:paddingTop="10dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/about_content3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Примітки.\n*Для системи Д-30 у віконцях «βо»  встановити значення виміряного за допомогою відбивача панорами вертикальний кут між марками виставленої біля основної гармати двометрової рейки, наприклад «0», «21» (що означає 0-21).
+            \n**Зміст усіх граф таблиці аналогічний змісту граф формалізованої таблиці індивідуальних поправок гармати, що розміщена в додатку Ж «Керівництва з бойової роботи вогневих підрозділів артилерії», вид. 2007р." />
+
+    </LinearLayout>
+</ScrollView>

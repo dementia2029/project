@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Поправки арт.систем</string>
+    <string name="action_settings">Settings</string>
+    <string name="label3">Арт.система</string>
+    <string name="label_R1">Дальність від</string>
+    <string name="label_R2">до</string>
+    <string name="calc">Підрахунок</string>
+    <string name="label_Dgun">\u0394Vo гарм</string>
+    <string name="label_Dmain">\u0394Vo осн</string>
+    <string name="labelDq">\u0394q</string>
+    <string name="label22">Кут</string>
+    <string name="label_inf1">До</string>
+    <string name="label1">\u03B2h</string>
+    <string name="label_inf2">\u03B2o</string>
+    <string name="dalnist">Дальність, м</string>
+    <string name="pricil">Приціл,тис./под.</string>
+    <string name="popravki">Поправки у рівень, тис.</string>
+    <string name="riznobiy">На різнобій\nвідносноно\основної</string>
+    <string name="na1procent">На 1%%</string>
+    <string name="deltaprpcent">\u03B2Vo</string>
+    <string name="deltaVo"><u>\u0394Vo</u></string>
+    <string name="deltaQ"><u>\u0394q</u></string>
+    <string name="deltaH"><u>\u0394h</u></string>
+    <string name="pyatPlus"><u>-5-00</u></string>
+    <string name="pyatMinus"><u>+5-00</u></string>
+    <string name="OH"><u>OH</u></string>
+
+</resources>
